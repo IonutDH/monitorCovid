@@ -44,6 +44,7 @@ public class NewFXMain extends Application {
         grid.add((AnchorPane)FXMLLoader.load(getClass().getResource("Heatmap.fxml")));
         grid.add((AnchorPane)FXMLLoader.load(getClass().getResource("ForgotPassword.fxml")));
         grid.add((AnchorPane)FXMLLoader.load(getClass().getResource("Favourites.fxml")));
+        grid.add((AnchorPane)FXMLLoader.load(getClass().getResource("Restrictions.fxml")));
         
         root.getChildren().add(grid.get(0));
         
