@@ -7,6 +7,7 @@ package proiect;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -101,6 +102,72 @@ public class FavouritesController implements Initializable {
         list = MainController.favList.get(user);
         list.remove(2);
         MainController.favList.put(user, list);
+    }
+    
+    @FXML
+    public static HashMap<String, String> countryRestr = new HashMap<String, String>();
+    
+    @FXML
+    public static String countryText;
+    
+    @FXML
+    public void restrictions1(){
+        countryRestr.put("canada", " State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("egypt", " State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("france", " State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("germany", " State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("greece", " State of emergency: NO\n PCR or Antigen test: NO\n Health form: NO\n Quarantine: NO");
+        countryRestr.put("italy", " State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("poland", " State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("romania", " State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("spain", " State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        
+        String user = SampleController.username;
+        ArrayList<String> list = new ArrayList<String>();
+        list = MainController.favList.get(user);
+        
+        countryText = list.get(0);
+        NewFXMain.set_pane(7);
+    }
+    
+    @FXML
+    public void restrictions2(){
+        countryRestr.put("canada", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("egypt", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("france", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("germany", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("greece", "State of emergency: NO\n PCR or Antigen test: NO\n Health form: NO\n Quarantine: NO");
+        countryRestr.put("italy", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("poland", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("romania", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("spain", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        
+        String user = SampleController.username;
+        ArrayList<String> list = new ArrayList<String>();
+        list = MainController.favList.get(user);
+        
+        countryText = list.get(1);
+        NewFXMain.set_pane(7);
+    }
+    
+    @FXML
+    public void restrictions3(){
+        countryRestr.put("canada", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("egypt", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("france", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("germany", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("greece", "State of emergency: NO\n PCR or Antigen test: NO\n Health form: NO\n Quarantine: NO");
+        countryRestr.put("italy", "State of emergency: YES\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("poland", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: YES");
+        countryRestr.put("romania", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        countryRestr.put("spain", "State of emergency: NO\n PCR or Antigen test: YES\n Health form: YES\n Quarantine: NO");
+        
+        String user = SampleController.username;
+        ArrayList<String> list = new ArrayList<String>();
+        list = MainController.favList.get(user);
+        
+        countryText = list.get(2);
+        NewFXMain.set_pane(7);
     }
     
     @Override
